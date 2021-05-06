@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Poke Api View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PokeApiViewController" customModule="Lab09Picker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lEz-sb-Mlp">
+                                <rect key="frame" x="0.0" y="646" width="414" height="216"/>
+                            </pickerView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tOd-rf-SNR">
+                                <rect key="frame" x="20" y="140" width="374" height="34"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who is that Pokemon?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YwG-3J-Zsl">
+                                <rect key="frame" x="44.5" y="64" width="325" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Pl-aI-6z8">
+                                <rect key="frame" x="20" y="222" width="374" height="395"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.59045885148616817" green="0.92463801129796175" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7Pl-aI-6z8" firstAttribute="top" secondItem="tOd-rf-SNR" secondAttribute="bottom" constant="48" id="0Y9-fI-880"/>
+                            <constraint firstItem="YwG-3J-Zsl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D0b-M5-UwT"/>
+                            <constraint firstItem="tOd-rf-SNR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="G5O-VL-Xqd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lEz-sb-Mlp" secondAttribute="trailing" id="Liy-ls-hho"/>
+                            <constraint firstItem="lEz-sb-Mlp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Mti-IH-Ne9"/>
+                            <constraint firstItem="tOd-rf-SNR" firstAttribute="top" secondItem="YwG-3J-Zsl" secondAttribute="bottom" constant="35" id="S57-In-6U2"/>
+                            <constraint firstItem="lEz-sb-Mlp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Tj0-YF-emc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Pl-aI-6z8" secondAttribute="trailing" constant="20" id="V65-Ub-G4C"/>
+                            <constraint firstItem="7Pl-aI-6z8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XrZ-bY-bKV"/>
+                            <constraint firstItem="lEz-sb-Mlp" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="a3O-Cn-hKD"/>
+                            <constraint firstItem="lEz-sb-Mlp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fZX-2V-yRB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tOd-rf-SNR" secondAttribute="trailing" constant="20" id="nfT-LB-0DJ"/>
+                            <constraint firstItem="lEz-sb-Mlp" firstAttribute="top" secondItem="7Pl-aI-6z8" secondAttribute="bottom" constant="29" id="wvO-Qy-q50"/>
+                            <constraint firstItem="YwG-3J-Zsl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="zFh-gi-h79"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pokeImage" destination="7Pl-aI-6z8" id="2gc-FB-piq"/>
+                        <outlet property="pokeListPicker" destination="lEz-sb-Mlp" id="lL1-pC-lIt"/>
+                        <outlet property="pokeTextField" destination="tOd-rf-SNR" id="oER-ob-ipo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="77.678571428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
